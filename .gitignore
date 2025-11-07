@@ -1,0 +1,17 @@
+# PlatformIO build files
+.pio/
+.vscode/
+build/
+
+# Node-RED local configs
+node-red/.config.json
+node-red/.cache
+node-red/.config.*
+
+# Wokwi temporary or compiled stuff
+wokwi/.cache
+wokwi/*.tmp
+
+# OS files
+Thumbs.db
+.DS_Store

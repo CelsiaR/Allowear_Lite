@@ -1,0 +1,966 @@
+[
+    {
+        "id": "b4f47bdb8987ab99",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "671dc2c5ec4198a8",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1884",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "celsia/health/data",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "temp",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "378886f3858c704a",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "29df471cee33e4ad",
+        "type": "ui_tab",
+        "name": "Allowear Lite-Maternal Health Monitor",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "fc0559c59a9610b8",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "cc2c0648d2761a8c",
+        "type": "ui_group",
+        "name": "Stress and Motion",
+        "tab": "29df471cee33e4ad",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a4f3d0ea93612456",
+        "type": "ui_group",
+        "name": "Heart Vitals Monitoring",
+        "tab": "29df471cee33e4ad",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5fe43ac4ddeb58a5",
+        "type": "ui_group",
+        "name": "Alerts",
+        "tab": "29df471cee33e4ad",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "21fe41888974ca44",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "29df471cee33e4ad",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ".nr-dashboard-theme .md-toolbar {   background: linear-gradient(90deg, #0288d1 0%, #26c6da 100%);   color: #fff;   font-weight: 600; }"
+    },
+    {
+        "id": "e073cd01a6bace98",
+        "type": "ui_group",
+        "name": "HRV Trend",
+        "tab": "29df471cee33e4ad",
+        "order": 5,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1d035880ebef18ba",
+        "type": "mqtt in",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "topic": "celsia/health/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "378886f3858c704a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 80,
+        "wires": [
+            [
+                "8c1a04bfb06a566b"
+            ]
+        ]
+    },
+    {
+        "id": "f7d520135973a6ce",
+        "type": "mqtt in",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "topic": "celsia/health/readable",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "378886f3858c704a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8c1a04bfb06a566b",
+        "type": "json",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "property": "payload/temp",
+        "action": "",
+        "pretty": false,
+        "x": 470,
+        "y": 80,
+        "wires": [
+            [
+                "1ae1016741771745",
+                "0fe4d195056bde14",
+                "3774a24908407c33",
+                "258ffca4d89098b8",
+                "77c268731a8a0ee6",
+                "9079ece244af6cfc",
+                "82c82e8ff957186d",
+                "891ab3c53460fc2b",
+                "e950545916e53c25",
+                "a6b197cf2362d370"
+            ]
+        ]
+    },
+    {
+        "id": "1ae1016741771745",
+        "type": "ui_gauge",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "group": "21fe41888974ca44",
+        "order": 0,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "Temperature(°C)",
+        "label": "°C",
+        "format": "{{msg.payload.temp}}",
+        "min": "30",
+        "max": "45",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "35",
+        "seg2": "40",
+        "diff": false,
+        "className": "",
+        "x": 870,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "8429f68357ccd8c5",
+        "type": "ui_chart",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "group": "a4f3d0ea93612456",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "label": "Heart Rate(bpm)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "50",
+        "ymax": "120",
+        "removeOlder": 1,
+        "removeOlderPoints": "10",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 910,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa896899ffc243d0",
+        "type": "ui_gauge",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "group": "cc2c0648d2761a8c",
+        "order": 2,
+        "width": "6",
+        "height": "5",
+        "gtype": "gage",
+        "title": "Stress level",
+        "label": "ratio",
+        "format": "{{msg.payload.stress}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "0.4",
+        "seg2": "0.7",
+        "diff": false,
+        "className": "",
+        "x": 910,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ce290a499502cf30",
+        "type": "ui_text",
+        "z": "b4f47bdb8987ab99",
+        "group": "cc2c0648d2761a8c",
+        "order": 3,
+        "width": "4",
+        "height": "2",
+        "name": "",
+        "label": "Step Count",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 910,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "5e224c23b4fc5974",
+        "type": "ui_toast",
+        "z": "b4f47bdb8987ab99",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Baby cry Alert",
+        "name": "Baby cry Detected",
+        "x": 1190,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0fe4d195056bde14",
+        "type": "change",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.heart",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 140,
+        "wires": [
+            [
+                "8429f68357ccd8c5"
+            ]
+        ]
+    },
+    {
+        "id": "3774a24908407c33",
+        "type": "change",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.stress",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 220,
+        "wires": [
+            [
+                "aa896899ffc243d0"
+            ]
+        ]
+    },
+    {
+        "id": "258ffca4d89098b8",
+        "type": "change",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.steps",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 300,
+        "wires": [
+            [
+                "ce290a499502cf30"
+            ]
+        ]
+    },
+    {
+        "id": "77c268731a8a0ee6",
+        "type": "switch",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "property": "payload.audio",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "0.6",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 690,
+        "y": 400,
+        "wires": [
+            [
+                "01288167b71a3fb5"
+            ]
+        ]
+    },
+    {
+        "id": "032c5af9963d5670",
+        "type": "change",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Baby cry detected! Sound intensity above threshold.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 400,
+        "wires": [
+            [
+                "5e224c23b4fc5974"
+            ]
+        ]
+    },
+    {
+        "id": "01288167b71a3fb5",
+        "type": "delay",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "15",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 820,
+        "y": 400,
+        "wires": [
+            [
+                "032c5af9963d5670"
+            ]
+        ]
+    },
+    {
+        "id": "955ffacff644098d",
+        "type": "ui_chart",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "group": "e073cd01a6bace98",
+        "order": 2,
+        "width": "6",
+        "height": "6",
+        "label": "Heart Rate Variability (ms)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "120",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d91c1c",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1130,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9079ece244af6cfc",
+        "type": "change",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.hrv_ms",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 480,
+        "wires": [
+            [
+                "955ffacff644098d"
+            ]
+        ]
+    },
+    {
+        "id": "c76341a5f94c550b",
+        "type": "ui_text",
+        "z": "b4f47bdb8987ab99",
+        "group": "e073cd01a6bace98",
+        "order": 1,
+        "width": "4",
+        "height": "1",
+        "name": "",
+        "label": "Avg HRV:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 900,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "82c82e8ff957186d",
+        "type": "change",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.hrv_ms",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 560,
+        "wires": [
+            [
+                "c76341a5f94c550b"
+            ]
+        ]
+    },
+    {
+        "id": "891ab3c53460fc2b",
+        "type": "change",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.heart",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 620,
+        "wires": [
+            [
+                "03a6c085a2a1a229"
+            ]
+        ]
+    },
+    {
+        "id": "03a6c085a2a1a229",
+        "type": "ui_text",
+        "z": "b4f47bdb8987ab99",
+        "group": "a4f3d0ea93612456",
+        "order": 1,
+        "width": "4",
+        "height": "1",
+        "name": "",
+        "label": "Heart Rate",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 930,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "e950545916e53c25",
+        "type": "switch",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "property": "payload.stress",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "0.9",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 630,
+        "y": 720,
+        "wires": [
+            [
+                "9118db6048b39cbf"
+            ]
+        ]
+    },
+    {
+        "id": "9118db6048b39cbf",
+        "type": "delay",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "25",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 840,
+        "y": 720,
+        "wires": [
+            [
+                "5cb1be045c3bf525"
+            ]
+        ]
+    },
+    {
+        "id": "5cb1be045c3bf525",
+        "type": "change",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Stress Levels High!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1080,
+        "y": 720,
+        "wires": [
+            [
+                "75b157e016764665"
+            ]
+        ]
+    },
+    {
+        "id": "75b157e016764665",
+        "type": "ui_toast",
+        "z": "b4f47bdb8987ab99",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Stress Alert",
+        "name": "Stress Rise Alert",
+        "x": 1280,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a6b197cf2362d370",
+        "type": "switch",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "property": "payload.temp",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "40",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 586,
+        "y": 786,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c317d18d96d96aaa",
+        "type": "delay",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "25",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 726,
+        "y": 786,
+        "wires": [
+            [
+                "e70195c1ef73729a"
+            ]
+        ]
+    },
+    {
+        "id": "e70195c1ef73729a",
+        "type": "change",
+        "z": "b4f47bdb8987ab99",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "High temperature",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 906,
+        "y": 786,
+        "wires": [
+            [
+                "b4528dfce69da3b5"
+            ]
+        ]
+    },
+    {
+        "id": "b4528dfce69da3b5",
+        "type": "ui_toast",
+        "z": "b4f47bdb8987ab99",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Temperature Alert",
+        "name": "Temp Increase Detected",
+        "x": 1146,
+        "y": 786,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c67a646b2c7eba9",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
