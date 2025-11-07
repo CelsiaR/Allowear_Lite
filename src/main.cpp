@@ -158,12 +158,10 @@ void loop() {
     "\"heart\":%d,\"hrv_ms\":%.0f,\"audio\":%.2f,\"stress\":%.2f}",
     tempC, accelMag, (unsigned long)steps, heart, hrv_ms, audioPct, stress);
 
-// --- Publish JSON data (for dashboards) ---
 client.publish(topic_data, payload);
 Serial.print("Published JSON: ");
 Serial.println(payload);
 
-// --- Publish human-readable version (for HiveMQ demo) ---
 char humanMsg[150];
 snprintf(humanMsg, sizeof(humanMsg),
          "Temp=%.1fC | Heart=%dbpm | HRV=%.0fms | Steps=%lu | Stress=%.2f",
